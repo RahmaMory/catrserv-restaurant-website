@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CaterServ</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playball&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+  </head>
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+         <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container py-4">
+          <a class="navbar-brand" href="#">
+            <h1 class="fw-bold"><span>Cater</span>Serv</h1>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active me-2" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-2" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-2" href="service.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-2" href="event.html">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-2" href="menu.html">Menu</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle me-2"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Pages
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <li><a class="dropdown-item" href="book.html">Booking</a></li>
+                  <li><a class="dropdown-item" href="blog.html">Our Blog</a></li>
+                  <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                  <li><a class="dropdown-item" href="testimonial.html">Testimonial</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-2" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex"
+            data-bs-toggle="modal"
+            data-bs-target="#searchModal"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+          <a
+            href="#"
+            class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill"
+            >Book Now</a
+          >
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control bg-transparent p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Hero Start -->
+        <div class="container-fluid bg-light py-6 my-6 mt-0">
+            <div class="container text-center animated bounceInDown">
+                <h1 class="display-1 mb-4">Events</h1>
+                <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-dark" aria-current="page">Events</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+  <!--Events Start-->
+  <div id="Events" style="background-color: #fff">
+    <div class="container-fluid py-6 mt-5 text-center align-items-center">
+      <div class="container">
+        <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+          <h5
+            class="fw-bold mb-4 border border-primary rounded-pill px-4 py-1 d-inline-block"
+          >
+            Latest Events
+          </h5>
+          <h1 class="pb-4">Our Social & Professional Events Gallery</h1>
+        </div>
+
+        <div class="tap-class text-cente wow bounceInUp" data-wow-delay="0.1s">
+          <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
+            <li class="nav-item p-2">
+              <a
+                class="nav-link active border bg-light btn-primary d-flex mx-2 py-2 rounded-pill"
+                data-bs-toggle="tab"
+                href="#tab-1"
+              >
+                <span class="text-dark" style="width: 150px">All Events</span>
+              </a>
+            </li>
+            <li class="nav-item p-2">
+              <a
+                class="nav-link border bg-light btn-primary d-flex mx-2 py-2 rounded-pill"
+                data-bs-toggle="tab"
+                href="#tab-2"
+              >
+                <span class="text-dark" style="width: 150px">Wedding</span>
+              </a>
+            </li>
+            <li class="nav-item p-2">
+              <a
+                class="nav-link border bg-light btn-primary d-flex mx-2 py-2 rounded-pill"
+                data-bs-toggle="tab"
+                href="#tab-3"
+              >
+                <span class="text-dark" style="width: 150px">Corporate</span>
+              </a>
+            </li>
+            <li class="nav-item p-2">
+              <a
+                class="nav-link border bg-light btn-primary d-flex mx-2 py-2 rounded-pill"
+                data-bs-toggle="tab"
+                href="#tab-4"
+              >
+                <span class="text-dark" style="width: 150px">Cocktail</span>
+              </a>
+            </li>
+            <li class="nav-item p-2">
+              <a
+                class="nav-link border bg-light btn-primary d-flex mx-2 py-2 rounded-pill"
+                data-bs-toggle="tab"
+                href="#tab-5"
+              >
+                <span class="text-dark" style="width: 150px">Buffet</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tap-content text-center">
+          <div id="tab-1" class="tab-pane fade show active">
+            <div class="row g-4">
+              <div class="col-lg-12">
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-1.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Wedding</h4>
+                        <a
+                          href="img/event-1.jpg"
+                          data-lightbox="event-1"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-2.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Corporate</h4>
+                        <a
+                          href="img/event-2.jpg"
+                          data-lightbox="event-2"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-3.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Wedding</h4>
+                        <a
+                          href="img/event-3.jpg"
+                          data-lightbox="event-3"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-4.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Buffet</h4>
+                        <a
+                          href="img/event-4.jpg"
+                          data-lightbox="event-4"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-5.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Cocktail</h4>
+                        <a
+                          href="img/event-5.jpg"
+                          data-lightbox="event-5"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-6.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Wedding</h4>
+                        <a
+                          href="img/event-6.jpg"
+                          data-lightbox="event-6"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-7.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Buffet</h4>
+                        <a
+                          href="img/event-7.jpg"
+                          data-lightbox="event-7"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-8.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Corporate</h4>
+                        <a
+                          href="img/event-8.jpg"
+                          data-lightbox="event-8"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-2" class="tab-pane fade">
+            <div class="row g-4">
+              <div class="col-lg-12">
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-3">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-1.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Wedding</h4>
+                        <a
+                          href="img/01.jpg"
+                          data-lightbox="event-8"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-2.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Wedding</h4>
+                        <a
+                          href="img/01.jpg"
+                          data-lightbox="event-9"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-3" class="tab-pane fade">
+            <div class="row g-4">
+              <div class="col-lg-12">
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-3">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-3.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Corporate</h4>
+                        <a
+                          href="img/01.jpg"
+                          data-lightbox="event-10"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-4.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Corporate</h4>
+                        <a
+                          href="img/01.jpg"
+                          data-lightbox="event-11"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-4" class="tab-pane fade">
+            <div class="row g-4">
+              <div class="col-lg-12">
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-3">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-5.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Cocktail</h4>
+                        <a
+                          href="img/01.jpg"
+                          data-lightbox="event-12"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-6.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Cocktail</h4>
+                        <a
+                          href="img/01.jpg"
+                          data-lightbox="event-13"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-5" class="tab-pane fade">
+            <div class="row g-4">
+              <div class="col-lg-12">
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-3">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-7.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Buffet</h4>
+                        <a
+                          href="img/01.jpg"
+                          data-lightbox="event-14"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                    <div class="event-img position-relative">
+                      <img
+                        class="img-fluid rounded w-100"
+                        src="img/event-8.jpg"
+                        alt=""
+                      />
+                      <div class="event-overlay d-flex flex-column p-4">
+                        <h4 class="me-auto">Buffet</h4>
+                        <a
+                          href="img/01.jpg"
+                          data-lightbox="event-15"
+                          class="my-auto"
+                          ><i class="fas fa-search-plus text-dark fa-2x"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Events End-->
+
+
+    <!--Contact Starts-->
+    <div id="contact " style="background-color: #fff" class="wow bounceInUp" data-wow-delay="0.1s">
+        <div class="container-fluid py-6">
+          <div class="container">
+            <div class="row g-0">
+              <div class="col-1">
+                <img
+                  src="./img/background-site.jpg"
+                  class="img-fluid rounded-start w-100 h-100"
+                  style="object-fit: cover; opacity: 0.7"
+                  alt=""
+                />
+              </div>
+  
+              <div class="col-10">
+                <div
+                  class="border-bottom border-top bg-light border-primary py-5 px-4"
+                >
+                  <div class="text-center">
+                    <small
+                      class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3"
+                      >Book Us</small
+                    >
+                    <h1 class="mb-3 display-5">Where you want Our Services</h1>
+                  </div>
+  
+                  <div class="row g-4 form">
+                    <div class="col-lg-4 col-md-6">
+                      <select
+                        class="form-select p-2 border-primary form-control text-black-50"
+                        aria-label="Default select example "
+                      >
+                        <option selected>Select Country</option>
+                        <option value="1">USA</option>
+                        <option value="2">UK</option>
+                        <option value="3">India</option>
+                      </select>
+                    </div>
+  
+                    <div class="col-lg-4 col-md-6">
+                      <select
+                        class="form-select p-2 border-primary form-control text-black-50"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select City</option>
+                        <option value="1">Depend On Country</option>
+                        <option value="2">UK</option>
+                        <option value="3">India</option>
+                      </select>
+                    </div>
+  
+                    <div class="col-lg-4 col-md-6">
+                      <select
+                        class="form-select p-2 border-primary form-control text-black-50"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select Palace</option>
+                        <option value="1">USA</option>
+                        <option value="2">UK</option>
+                        <option value="3">India</option>
+                      </select>
+                    </div>
+  
+                    <div class="col-lg-4 col-md-6">
+                      <select
+                        class="form-select p-2 border-primary form-control text-black-50"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Small Event</option>
+                        <option value="1">Event Type</option>
+                        <option value="2">Big Event</option>
+                        <option value="3">Small Event</option>
+                      </select>
+                    </div>
+  
+                    <div class="col-lg-4 col-md-6">
+                      <select
+                        class="form-select p-2 border-primary form-control text-black-50"
+                        aria-label="Default select example"
+                      >
+                        <option selected>No. Of Palace</option>
+                        <option value="1">100-200</option>
+                        <option value="2">300-400</option>
+  
+                        <option value="3">500-600</option>
+  
+                        <option value="4">700-800</option>
+  
+                        <option value="5">900-1000</option>
+                        <option value="6">1000+</option>
+                      </select>
+                    </div>
+  
+                    <div class="col-lg-4 col-md-6">
+                      <select
+                        class="form-select p-2 border-primary form-control text-black-50"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Vegetarian</option>
+                        <option value="1">Vegetarian</option>
+                        <option value="2">Non Vegetarian</option>
+                      </select>
+                    </div>
+  
+                    <div class="col-lg-4 col-md-6">
+                      <input
+                        type="mobile"
+                        class="p-2 form-control border-primary text-black-50"
+                        placeholder="Your Contact No."
+                      />
+                    </div>
+  
+                    <div class="col-lg-4 col-md-6">
+                      <input
+                        type="date"
+                        class="form-control border-primary p-2 text-black-50"
+                        placeholder="Select Date"
+                      />
+                    </div>
+  
+                    <div class="col-lg-4 col-md-6">
+                      <input
+                        type="email"
+                        class="form-control border-primary p-2 text-black-50"
+                        placeholder="Enter Your Email"
+                      />
+                    </div>
+  
+                    <div class="col-12 text-center">
+                      <a href="#" class="btn btn-primary py-3 px-4 rounded-pill"
+                        >Submit Now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-1">
+                <img
+                  src="./img/background-site.jpg"
+                  class="img-fluid rounded-end w-100 h-100"
+                  style="object-fit: cover; opacity: 0.7"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Contact End-->
+  
+
+       <!--footer-->
+       <footer>
+        <div class="container-fluid py-6 wow bounceInUp" data-wow-delay="0.1s">
+          <div class="container">
+            <div class="row g-4">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                  <h1 class="fw-bold"><span>Cater</span>Serv</h1>
+                  <p class="text-black-50 lh-lg mb-4">
+                    There cursus massa at urnaaculis estieSed aliquamellus vitae
+                    ultrs condmentum leo massamollis its estiegittis miristum.
+                  </p>
+  
+                  <div class="footer-icon d-flex">
+                    <a
+                      href="#"
+                      class="btn btn-primary btn-sm-square rounded-circle me-2"
+                      ><i class="fa-brands fa-facebook-f rounded-circle"></i
+                    ></a>
+                    <a
+                      href="#"
+                      class="btn btn-primary btn-sm-square rounded-circle me-2"
+                      ><i class="fa-brands fa-twitter rounded-circle"></i
+                    ></a>
+                    <a
+                      href="#"
+                      class="btn btn-primary btn-sm-square rounded-circle me-2"
+                      ><i class="fa-brands fa-instagram rounded-circle"></i
+                    ></a>
+                    <a
+                      href="#"
+                      class="btn btn-primary btn-sm-square rounded-circle"
+                      ><i class="fa-brands fa-linkedin-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <h4 class="fw-bold mb-4">Special Facilities</h4>
+                <div class="d-flex flex-column">
+                  <a href="#" class="mb-3 text-black-50"
+                    ><i class="fa-solid fa-check me-2" style="color: #d4a762"></i
+                    >Cheese Burger</a
+                  >
+                  <a href="#" class="mb-3 text-black-50"
+                    ><i class="fa-solid fa-check me-2" style="color: #d4a762"></i
+                    >Sandwich
+                  </a>
+                  <a href="#" class="mb-3 text-black-50"
+                    ><i class="fa-solid fa-check me-2" style="color: #d4a762"></i
+                    >Panner Burger</a
+                  >
+                  <a href="#" class="mb-3 text-black-50"
+                    ><i class="fa-solid fa-check me-2" style="color: #d4a762"></i
+                    >Special Sweets</a
+                  >
+                </div>
+              </div>
+  
+              <div class="col-lg-3 col-md-6">
+                <h4 class="fw-bold mb-4">Contact Us</h4>
+                <div class="d-flex flex-column">
+                  <a href="#" class="mb-3 text-black-50"
+                    ><i
+                      class="fa-solid fa-location-dot me-2"
+                      style="color: #d4a762"
+                    ></i>
+                    123 Street, New York, USA</a
+                  >
+                  <a href="#" class="mb-3 text-black-50"
+                    ><i class="fa-solid fa-phone me-2" style="color: #d4a762"></i>
+                    (+012) 3456 7890 123
+                  </a>
+                  <a href="#" class="mb-3 text-black-50"
+                    ><i
+                      class="fa-solid fa-envelope me-2"
+                      style="color: #d4a762"
+                    ></i>
+                    info@example.com</a
+                  >
+                  <a href="#" class="mb-3 text-black-50"
+                    ><i class="fa-solid fa-clock me-2" style="color: #d4a762"></i>
+                    26/7 Hours Service</a
+                  >
+                </div>
+              </div>
+  
+              <div class="col-lg-3 col-md-6">
+                <h4 class="fw-bold mb-4">Social Gallery</h4>
+                <div class="row g-2">
+                  <div class="col-4">
+                    <img
+                      src="img/menu-01.jpg"
+                      class="img-fluid p-2 border border-primary rounded-circle"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-4">
+                    <img
+                      src="img/menu-02.jpg"
+                      class="img-fluid p-2 border border-primary rounded-circle"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-4">
+                    <img
+                      src="img/menu-03.jpg"
+                      class="img-fluid p-2 border border-primary rounded-circle"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-4">
+                    <img
+                      src="img/menu-04.jpg"
+                      class="img-fluid p-2 border border-primary rounded-circle"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-4">
+                    <img
+                      src="img/menu-05.jpg"
+                      class="img-fluid p-2 border border-primary rounded-circle"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-4">
+                    <img
+                      src="img/menu-06.jpg"
+                      class="img-fluid p-2 border border-primary rounded-circle"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+      <!-- Copyright Start -->
+      <div class="container-fluid copyright bg-dark py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              <span class="text-light"
+                ><a href="#" style="color: #d4a762"
+                  ><i class="fas fa-copyright text-light me-2"></i>Your Site
+                  Name</a
+                >, All right reserved.</span
+              >
+            </div>
+            <div class="col-md-6 my-auto text-center text-md-end text-white">
+              Designed By
+              <a
+                class="border-bottom"
+                style="color: #d4a762"
+                href="https://www.linkedin.com/in/rahma-hesham-yousef-b7ba211a7/"
+                >Rahma Hesham</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright End -->
+  
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-md-square btn-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
