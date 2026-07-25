@@ -420,11 +420,23 @@ span{
 
 
 /*start team*/
-#team .team-item{
+#team .team-item {
     position: relative;
-
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
-#team .team-icon{
+
+/* توحيد مقاس صور أعضاء الفريق فقط */
+#team .team-item > img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+#team .team-icon {
     position: absolute;
     top: 0;
     right: 0;
@@ -461,7 +473,6 @@ span{
     color: var(--bs-white);
 }
 /*** Team End ***/
-
 
 /**/
 /*** testimonial Start ***/
